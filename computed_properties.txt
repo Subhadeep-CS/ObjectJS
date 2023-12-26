@@ -1,0 +1,35 @@
+Computed Properties
+
+const myKey1="name";
+const myKey2="age";
+
+const value1="Subho";
+const value2=23;
+
+Now,you have to construct a object by using this variable and object look like 
+
+Person={
+    myKey1:value1,
+    myKey2:value2,
+}
+
+like that and now you can do it by using bracket
+
+const Person={};
+
+Person[myKey1]=value1;
+
+console.log(Person);
+
+But problem is that if you have 10 variable then it's not the efficient way to write
+like that,for this javascript has computed Properties of object where we can add
+dynamic variable directly in object and construct object.
+
+const Person={
+    [myKey1]:value1,
+    [myKey2]:value2,
+};
+
+and It will construct the object.
+
+Example doing in computed.js file.
