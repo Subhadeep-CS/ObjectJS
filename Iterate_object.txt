@@ -1,0 +1,60 @@
+How to iterate object?
+
+We can iterate a object in two ways.
+
+1. for in loop
+2. Using Object.keys method and for of loop.
+
+1.Using for in loop.
+
+Suppose,we construct a object
+
+const Person={
+    name:"Subho",
+    age:23,
+    gender:"male"
+};
+
+Now I want to iterate the objcet using for in loop.
+
+for(let Key in Person)
+{
+    console.log(key);
+}
+
+It will print the all key and all.Actually,in the for in loop,each iteration we get key
+inside the Key variable.
+
+Now,the fact is how we can print the property,if you print by using . then you will get
+undefined,because . notation used for static value,so it will try to find the key 
+property inside the Person object and It will not there so it's print undefined.
+
+For,printing we use bracket notation.
+
+for(let Key in Person)
+{
+    //console.log(Person.key);
+    //console.log(Person[key]);
+}
+
+We see it details in iteration.js file.
+
+2. Object.keys(); method
+
+We can iterate the object using Object.keys() method and for of loop.
+
+By using Object.keys() method we get a array with all the keys inside it. 
+
+Syntax:-
+
+    Object.keys(Object_name);
+    console.log(Object.keys(Object_name));
+
+now,we can iterate this array by using for of loop.
+
+Syntax: 
+
+for(let key of Object.keys(Person))
+{
+    console.log(Person[key]);
+}
