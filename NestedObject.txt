@@ -1,0 +1,51 @@
+Object inside Array.
+
+When we have multiple object same type,then we using nested object or we construct 
+a array and put all the object inside of the array.
+
+when we build a array and put all the object inside the array,that is called
+Array inside object.It's also called nested object.
+
+inside ArrayObj.js we put all the example here.
+
+const User=[
+    {userId:1,name:"Subho"},
+    {userId:2,name:"Ram"},
+    {userId:3,name:"Shyam"},
+];
+
+we make a array User and put all three object inside it.
+
+Now how we can access the property of array inside object.
+console.log(User[0].userId);
+
+Nested Object destructuring:-
+
+1.first you have to create variable that destructuring array.
+
+const [user1,user2,user3]=User;
+
+Now I get the object in user1,user2,user3 and now destructuring the each and every object
+
+******
+
+How to destructuring object internal property with variable,
+
+What happend when we want to destructure nested object. Firstly,we have to distruct the
+array.
+
+const [user1,user2,user3]=User;
+
+Now we get first object of array inside the user1.Now we want to unpack this user1
+
+what will do now we can do
+
+const {userId,name}=user1;
+
+that will unpack the user1 object but without using second line if we put this when we
+destructure the array we will get same result.
+
+const [{userId,name}, , ]=User;
+
+That's the all facts of object destructuring.
+

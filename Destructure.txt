@@ -1,0 +1,58 @@
+Destructuring is a technique to unpacking value from the array and object.
+
+Object Destructuring is same as array Destructuring. but there's one difference.
+
+now we make a object first
+
+const Band={
+    bandName:"fossils",
+    famousSong:"hasnuhana",
+};
+
+Now I want to Destructuring that object Band so.what can I do now.
+
+const {bandName,famousSong}=Band;
+
+Here's comes the difference into picture,
+
+When we are Destructuring a object,then we cannot change keyname when Destructuring it.
+If we change the key name it cannot assign and we will get undefined,that's called
+binding destructuring.
+
+const Band={
+    bandName:"fossils",
+    famousSong:"hasnuhana",
+};
+
+const {bandName,famousSong}=Band;
+
+console.log(bandName);
+console.log(famousSong);
+
+Now,if we want to change,then we will do assignment destructuring.
+
+const {bandName:var1,famousSong:var2}=Band;
+
+console.log(var1);
+console.log(var2);
+
+the type of variable is constant type.
+
+facts of object destructuring.
+
+We can create a new object using destructuring.
+
+const Band1={
+    bandName:"fossils",
+    famousSong:"hansuhana",
+    year:2018,
+    anotherSong:"khonro fossils",
+};
+
+const {bandName,famousSong,...restProps}=Band1;
+
+console.log(restProps);
+
+//restProps is a object.
+
+That's all for object destructuring.
