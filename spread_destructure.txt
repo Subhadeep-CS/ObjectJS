@@ -1,0 +1,71 @@
+Spread operator in object:-
+
+Using spread operator we can spread one object to another object and all properties avai
+lable for the second object.
+
+Here's some senario while spreading a object to another object.
+1.scene 1=>
+
+const Person1={
+    name:"Subho",
+    age: 23,
+}
+
+const Details={
+    gender:"male",
+};
+//spraed the all properties and method of Person1 and Details inside the NewPerson Object.
+const NewPerson={...Person1,...Details};
+console.log(NewPerson);
+
+2.Scene 2=>
+
+When we have duplicate item in Object.
+
+const Person1={
+    name:"Subho",
+    age: 23,
+}
+
+const Details={
+    name:"Subhadeep",
+    gender:"male",
+};
+//spraed the all properties and method of Person1 and Details inside the NewPerson Object.
+const NewPerson={...Details,...Person1};
+console.log(NewPerson);
+
+ Here we see that Person1 and Details both object has name property and when we are 
+ spread the object in a new object, then it will take last spreading object name.
+
+ Here,we spread the Person object at last so the name value will be "Subho", if we
+ spread Details object at last then the name value will be "Subhadeep".
+
+Facts of Object.
+
+When you have duplicate item inside the object then second propertie overwrite the first.
+
+const a={
+    x:1,
+    x:2,
+}
+
+if we print
+    console.log(a.x); then it will print 2 in console.
+
+scene 3:-
+
+We can spread static item inside an object,
+
+    const String1={..."abc"};
+
+{0: 'a', 1: 'b', 2: 'c'} , the object will look like this.
+
+***Important point of spread operator:-
+
+We can spread the element if the element is iterable 
+
+const String1={..."abc"},
+
+we can spread it because string is iterable in nature but we cannot spread any number
+and all.
