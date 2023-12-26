@@ -1,0 +1,115 @@
+What is object?
+
+Everything in Javascript is object.You can see window object,document object etc.
+
+Now,the question is that what is object? 
+
+The defination of object quiet be different i Javascript. Actually Javascript object is 
+not class-based object and there's no data type restriction.
+
+So,object is collection of interelated data and function. Inside a object,we have some
+variable called property and some method to manipulate the variable,called method.
+
+Inside,the javascript object,there are key-value pair.
+
+How to create object in Javascript?
+
+const Person={}
+
+Yes,we create a Person object which is empty.That is called empty object.
+
+now,
+
+const Person={name:"Subho",age:23};
+
+Here we add some property in it.Though we say that Inside the object,we have key-value 
+pair.Here the keys are name and age and values are "Subho" and 23, By default keys are
+string type.
+
+How to access data from the object?
+
+There's two way to access data from the object.
+
+1. By using (.) dot operator we can access data from the object.
+
+Syntax
+
+    Object_name.property_name;
+    Object_name.method();
+
+2.By using bracket([]), we can access data from the object.
+
+Syntax
+
+    Object_name["property_name"];
+    Object_name["method()"]; //evals the return value otherwise return undefined.
+
+How we can add property and method in object?
+
+1.By using (.) dot operator
+
+Using (.) operator we can add property inside an object.
+
+Syntax:-
+
+    Object_name.property_name=value;
+
+If the property_name already exixts then It will update the value,if the property
+does not exixts,it will add the property with value and you can add method also.
+
+2.By using [] bracket we can also add some property in it.
+
+Syntax:-
+
+    Object_name["property_name"]=value;
+
+If the property_name already exixts then It will update the value,if the property
+does not exixts,it will add the property with value and you can add method also.
+
+Difference between (.) and  bracket [] notatioon?
+
+We see that . and [] notatioon wroks same but there is huge difference between dot
+and bracket.
+
+1.dot notation wroks only on static data, but bracket wroks on dynamic data and now
+the question is what is static data and what is dynamic data.
+
+For example
+
+    we have veriable const key="email";
+
+Now,you want to add that variable_value "email" as a key of object.Now if you use . 
+notation what you will do
+
+        Object_name.key="abc@gmail.com";
+When you do that thing, key will add as a property but we have to add email.
+
+So,we have to do something,for which key will be replaced by the email.for that we use
+bracket notation.
+
+        Object_name[expression]="abc@gmail.com";
+        Object_name[key]="abc@gmaail.com"
+When you do that key will evaluated by the bracket and it will replace by email and 
+add email as a property.
+
+Means using bracket notation we can add data dynamically. That's the huge difference
+between . and bracket.
+
+2. Suppose we put a key inside object which name is "person gender" which value is 
+male and I want to access that property.
+
+    const Person={name:"Subho",
+        "person gender":"male";
+    }
+
+If we want to access the person gender property then it will ocuur a SyntaxError.
+
+        console.log(Person.person gender);
+
+Uncaught SyntaxError: missing ) after argument list.
+
+But,if you want to access it by using bracket notation then you can access the property.
+
+        console.log(Person["person gender"]);
+
+This is the two key difference between the . and [] notation.
